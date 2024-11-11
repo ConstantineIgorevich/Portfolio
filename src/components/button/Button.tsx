@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 
 type ButtonPropsType = {
-  text: string
+  text: string,
+  type?: "submit" | "reset",
 };
 
 export const Button = (props: ButtonPropsType) => {
   return (
-    <StyledButton>{props.text}</StyledButton>
+    <StyledButton type={props.type}>{props.text}</StyledButton>
   )
 };
 
