@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 type FlexWrapperPropsType = {
+    margin?: string;
     direction?: string;
     justify?: string;
     align?: string;
@@ -15,4 +16,5 @@ export const FlexWrapper = styled.div<FlexWrapperPropsType>`
     align-items: ${props => props.align || "stretch"};
     flex-wrap: ${props => props.wrap || "nowrap"};
     gap: ${props => props.gap || "0"};
+    margin: ${props => props.margin || "0"};
 `

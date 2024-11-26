@@ -1,14 +1,14 @@
 import styled from "styled-components";
-import { Link } from "../link/Link";
-import { Button } from "../button/Button";
+import { Link } from "../Link";
+import { Button } from "../Button";
 import { FlexWrapper } from "../FlexWrapper";
 
 export const Menu = () => {
   return (
     <StyledMenu>
-      <FlexWrapper>
-        <Link text="Project" href="#" />
-        <Button text="Contact" />
+      <FlexWrapper justify="space-between" align="center">
+        <Link href="#" >Project</Link>
+        <Button>Contact</Button>
       </FlexWrapper>
     </StyledMenu>
   );

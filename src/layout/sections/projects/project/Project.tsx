@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { Button } from "../../../../components/button/Button";
+import { Button } from "../../../../components/Button";
+import { FlexWrapper } from "../../../../components/FlexWrapper";
 
 type ProjectPropsType = {
   path: string;
@@ -9,10 +10,12 @@ export const Project = (props: ProjectPropsType) => {
   return (
     <StyledProject>
       <StyledImg src={props.path} alt="" />
-      <h3>Title project</h3>
-      <Button text="java script" />
-      <Button text="styled components" />
-      <Button text="react" />
+      <Title>TITLE PROJECT</Title>
+      <FlexWrapper gap="12px" margin="19px">
+        <Button>JAVASCRIPT</Button>
+        <Button>STYLED COMPONENTS</Button>
+        <Button>REACT</Button>
+      </FlexWrapper>
       <StyledText>
         Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
         sint. Velit officia consequat duis enim velit mollit. Exercitation
@@ -22,15 +25,28 @@ export const Project = (props: ProjectPropsType) => {
   );
 };
 
+const Title = styled.h3`
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 11px;
+  margin-top: 29px;
+`;
+
 const StyledProject = styled.section`
-  background-color: #e0f2d9;
+  overflow: hidden;
+  background-color: #f5f2fd;
+  border-radius: 6px;
+  box-shadow: 2px 2px 32px 0px rgba(40, 38, 44, 0.15);
 `;
 
 const StyledImg = styled.img`
-  width: 522px;
-  height: 388px;
+  max-width: 522px;
+  max-height: 388px;
 `;
 
 const StyledText = styled.p`
- max-width: 522px;
+  max-width: 522px;
 `;
